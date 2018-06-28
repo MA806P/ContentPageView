@@ -21,6 +21,18 @@
 
 
 
+#pragma mark - PageDataSource
+
+- (UIViewController *)controllerAtIndex:(NSInteger)index {
+    
+    NSLog(@" %s ", __func__);
+    
+    UIViewController *vc = [[UIViewController alloc] init];
+    vc.view.backgroundColor = [UIColor blueColor];
+    return vc;
+    
+}
+
 
 
 

@@ -6,8 +6,8 @@
 //  Copyright © 2018年 myz. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "MYZCoverController.h"
 
-@interface MYZHomePageController : UIViewController
+@interface MYZHomePageController : MYZCoverController
 
 @end
