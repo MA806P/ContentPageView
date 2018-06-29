@@ -22,6 +22,7 @@
     
     MYZPageController *pageController = [[MYZPageController alloc] init];
     pageController.dataSource = self;
+    pageController.delegate = self;
     
     [self addChildViewController:pageController];
     [self.view addSubview:pageController.view];
@@ -37,6 +38,9 @@
     return nil;
 }
 
+- (NSInteger)numberOfControllers {
+    return 0;
+}
 
 
 

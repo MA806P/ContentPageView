@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "MYZPageProtocol.h"
 
-@interface MYZTabController : UIViewController<MYZPageDateSource>
+@interface MYZTabController : UIViewController<MYZPageDateSource, MYZPageDelegate>
 
 @end

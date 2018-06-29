@@ -7,7 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MYZPageProtocol.h"
+
+
 
 @interface MYZPageContentView : UIScrollView
+
+- (CGRect)getVisibleViewControllerFrameWithIndex:(NSInteger)index;
+- (CGPoint)getOffsetWithIndex:(NSInteger)index;
+- (NSInteger)getIndex;
+
+- (void)setItem:(id<MYZPageDateSource>)item;
+
 
 @end
