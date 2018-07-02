@@ -7,11 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
-
+@class MYZPageController;
 
 @protocol MYZPageDelegate <NSObject>
 
 @optional
+
+//交互切换回调
+- (void)pageviewController:(MYZPageController*)pageController willTransitionFromVC:(UIViewController *)fromVC toViewController:(UIViewController *)toVC;
+- (void)pageviewController:(MYZPageController*)pageController didTransitionFromVC:(UIViewController *)fromVC toViewController:(UIViewController *)toVC;
+//非交互切换回调
+- (void)pageviewController:(MYZPageController*)pageController willLeaveFromVC:(UIViewController *)fromVC toViewController:(UIViewController *)toVC;
+- (void)pageviewController:(MYZPageController*)pageController didLeaveFromVC:(UIViewController *)fromVC toViewController:(UIViewController *)toVC;
+
 //横向滑动回调
 - (void)scrollViewContentOffsetWithRatio:(CGFloat)ratio draging:(BOOL)draging;
 //垂直滑动的回调

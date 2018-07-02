@@ -25,15 +25,28 @@
 
 - (UIViewController *)controllerAtIndex:(NSInteger)index {
     
-    NSLog(@" %s ", __func__);
+    NSLog(@" %s  %ld", __func__, index);
     
     UIViewController *vc = [[UIViewController alloc] init];
-    vc.view.backgroundColor = [UIColor blueColor];
+    if (index == 0) {
+        vc.view.backgroundColor = [UIColor blueColor];
+    } else if (index == 1) {
+        vc.view.backgroundColor = [UIColor grayColor];
+    } else if (index == 2) {
+        vc.view.backgroundColor = [UIColor lightGrayColor];
+    }
     return vc;
     
 }
 
 
+- (NSInteger)numberOfControllers {
+    return 3;
+}
+
+-(BOOL)isSubPageCanScrollForIndex:(NSInteger)index {
+    return YES;
+}
 
 
 @end

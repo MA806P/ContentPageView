@@ -18,6 +18,11 @@
 @property (nonatomic, strong) MYZPageContentView *scrollView;
 
 @property (nonatomic, assign) NSInteger currentPageIndex;
+@property (nonatomic, assign) NSInteger guessToIndex;
+@property (nonatomic, assign) CGFloat originOffset;
+
+@property (nonatomic, assign) BOOL firstWillAppear;
+@property (nonatomic, assign) BOOL firstDidAppear;
 
 @end
 
@@ -41,12 +46,20 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    [[self p_controllerAtIndex:0] beginAppearanceTransition:NO animated:YES];
+    if (self.firstWillAppear) {
+        self.firstWillAppear = NO;
+        [self p_updateScrollViewLayoutIfNeed];
+    }
+    
+    [[self p_controllerAtIndex:self.currentPageIndex] beginAppearanceTransition:NO animated:YES];
 }
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    [[self p_controllerAtIndex:0] endAppearanceTransition];
+    if (self.firstDidAppear) {
+        self.firstDidAppear = NO;
+    }
+    [[self p_controllerAtIndex:self.currentPageIndex] endAppearanceTransition];
 }
 
 
@@ -54,6 +67,8 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor clearColor];
     
+    self.firstWillAppear = YES;
+    self.firstDidAppear = YES;
     
     //content scroll view
     self.scrollView = [[MYZPageContentView alloc] initWithFrame:self.view.bounds];
@@ -63,8 +78,75 @@
 }
 
 
+#pragma mark - UIScrollView Delegate
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
+    if (scrollView.isDragging && scrollView == self.scrollView) {
+        
+        CGFloat offset = scrollView.contentOffset.x;
+        CGFloat width = scrollView.frame.size.width;
+        CGFloat lastGuestIndex = self.guessToIndex < 0 ? self.currentPageIndex : self.guessToIndex;
+        
+        if (self.originOffset < offset) {
+            self.guessToIndex = ceil(offset/width);
+        } else if (self.originOffset >= offset) {
+            self.guessToIndex = floor(offset/width);
+        }
+        
+        NSInteger maxCount = [self p_pageCount];
+        
+        if (((self.guessToIndex != self.currentPageIndex && !self.scrollView.isDecelerating) || self.scrollView.isDecelerating)
+            && lastGuestIndex != self.guessToIndex
+            && self.guessToIndex >= 0
+            && self.guessToIndex < maxCount ) {
+            
+            [self p_controllerAtIndex:self.currentPageIndex];
+            [self p_controllerAtIndex:self.guessToIndex];
+        }
+        
+        
+    }
+    
+}
+
+
 
 #pragma mark - private method
+
+
+- (NSInteger)p_pageCount {
+    return [self.dataSource numberOfControllers];
+}
+
+
+//get controller from dataSource, add controller view, cache controller
+- (UIViewController *)p_controllerAtIndex:(NSInteger)index {
+    
+    if (![self.menoryCacheDic objectForKey:@(index)]) {
+        
+        UIViewController *controller = [self.dataSource controllerAtIndex:index];
+        if (controller) {
+            
+            if ([self.dataSource respondsToSelector:@selector(isSubPageCanScrollForIndex:)]
+                && [self.dataSource isSubPageCanScrollForIndex:index]) {
+                controller.view.hidden = NO;
+            } else {
+                controller.view.hidden = YES;
+            }
+            
+            if ([controller conformsToProtocol:@protocol(MYZPageSubControllerDataSource)]) {
+                [self p_bindController:(UIViewController<MYZPageSubControllerDataSource> *)controller index:index];
+            }
+            
+            [self.menoryCacheDic setObject:controller forKey:@(index)];
+            [self p_addVisibleViewController:controller index:index];
+        }
+    }
+    return self.menoryCacheDic[@(index)];
+}
+
+
 
 //add child controller, add subview to scroll view
 - (void)p_addVisibleViewController:(UIViewController *)childController index:(NSInteger)index {
@@ -78,32 +160,6 @@
     CGRect childViewFrame = [self.scrollView getVisibleViewControllerFrameWithIndex:index];
     childController.view.frame = childViewFrame;
     [self.scrollView addSubview:childController.view];
-}
-
-//get controller from dataSource, add controller view, cache controller
-- (UIViewController *)p_controllerAtIndex:(NSInteger)index {
-    
-    if (![self.menoryCacheDic objectForKey:@(index)]) {
-        
-        UIViewController *controller = [self.dataSource controllerAtIndex:index];
-        if (controller) {
-            
-            if ([self.dataSource respondsToSelector:@selector(isSubPageCanScrollForIndex:)]
-                && [self.dataSource isSubPageCanScrollForIndex:index]) {
-                controller.view.hidden = YES;
-            } else {
-                controller.view.hidden = NO;
-            }
-            
-            if ([controller conformsToProtocol:@protocol(MYZPageSubControllerDataSource)]) {
-                
-            }
-            
-            [self.menoryCacheDic setObject:controller forKey:@(index)];
-            [self p_addVisibleViewController:controller index:index];
-        }
-    }
-    return self.menoryCacheDic[@(index)];
 }
 
 
@@ -125,7 +181,7 @@
 #endif
     }
     
-    //观察page里面显示的childController的scrollView，纵向滑动的控制
+    //观察page里面显示的childController的scrollView，上下滑动的控制
     [scrollView addObserver:self forKeyPath:@"contentOffset" options:NSKeyValueObservingOptionInitial | NSKeyValueObservingOptionNew context:nil];
     scrollView.contentOffset = CGPointMake(0, -scrollView.contentInset.top);
     
@@ -159,14 +215,30 @@
                 scrollView.contentOffset = CGPointMake(0, self.lastContentOffsetDic[@(index)].floatValue);
             }
         } else {
-            
+            self.lastContentOffsetDic[@(index)] = @(scrollView.contentOffset.y);
+            [self.delegate scrollWithPageOffset:scrollView.contentOffset.y index:index];
         }
         
+        self.lastContentSizeDic[@(index)] = @(scrollView.contentSize.height);
     }
     
 }
 
 
+
+- (void)p_updateScrollViewLayoutIfNeed {
+    
+    NSLog(@"before - %@ %@", NSStringFromCGRect(self.scrollView.frame), NSStringFromCGSize(self.scrollView.contentSize));
+    
+    if (self.scrollView.frame.size.width > 0) {
+        [self.scrollView setItem:self.dataSource];
+    }
+    
+    NSLog(@"after - %@ %@", NSStringFromCGRect(self.scrollView.frame), NSStringFromCGSize(self.scrollView.contentSize));
+}
+
+
+#pragma mark - public method
 
 + (BOOL)iPhoneX {
     static BOOL flag;
