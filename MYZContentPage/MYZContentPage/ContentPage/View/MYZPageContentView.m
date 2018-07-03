@@ -18,7 +18,7 @@
         self.showsVerticalScrollIndicator = NO;
         self.showsHorizontalScrollIndicator = NO;
         self.pagingEnabled = YES;
-        self.backgroundColor = [UIColor redColor];
+        //self.backgroundColor = [UIColor redColor];
         self.scrollsToTop = NO;
         
 #ifdef __IPHONE_11_0
