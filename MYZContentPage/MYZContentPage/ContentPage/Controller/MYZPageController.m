@@ -81,33 +81,33 @@
 #pragma mark - UIScrollView Delegate
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    
+
     if (scrollView.isDragging && scrollView == self.scrollView) {
-        
+
         CGFloat offset = scrollView.contentOffset.x;
         CGFloat width = scrollView.frame.size.width;
         CGFloat lastGuestIndex = self.guessToIndex < 0 ? self.currentPageIndex : self.guessToIndex;
-        
+
         if (self.originOffset < offset) {
             self.guessToIndex = ceil(offset/width);
         } else if (self.originOffset >= offset) {
             self.guessToIndex = floor(offset/width);
         }
-        
+
         NSInteger maxCount = [self p_pageCount];
-        
+
         if (((self.guessToIndex != self.currentPageIndex && !self.scrollView.isDecelerating) || self.scrollView.isDecelerating)
             && lastGuestIndex != self.guessToIndex
             && self.guessToIndex >= 0
             && self.guessToIndex < maxCount ) {
-            
+
             [self p_controllerAtIndex:self.currentPageIndex];
             [self p_controllerAtIndex:self.guessToIndex];
         }
-        
-        
+
+
     }
-    
+
 }
 
 
@@ -228,13 +228,10 @@
 
 - (void)p_updateScrollViewLayoutIfNeed {
     
-    NSLog(@"before - %@ %@", NSStringFromCGRect(self.scrollView.frame), NSStringFromCGSize(self.scrollView.contentSize));
-    
     if (self.scrollView.frame.size.width > 0) {
         [self.scrollView setItem:self.dataSource];
     }
     
-    NSLog(@"after - %@ %@", NSStringFromCGRect(self.scrollView.frame), NSStringFromCGSize(self.scrollView.contentSize));
 }
 
 
