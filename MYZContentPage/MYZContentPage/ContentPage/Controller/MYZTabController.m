@@ -34,7 +34,7 @@
 #pragma mark -  MYZPageDataSource
 
 - (UIViewController *)controllerAtIndex:(NSInteger)index {
-    NSLog(@" %s ", __func__);
+    //NSLog(@" %s ", __func__);
     return nil;
 }
 
