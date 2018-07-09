@@ -13,3 +13,11 @@
 
 
 @end
+
+
+
+@protocol MYZTabDataSource <NSObject>
+
+- (CGFloat)preferTabY;
+
+@end

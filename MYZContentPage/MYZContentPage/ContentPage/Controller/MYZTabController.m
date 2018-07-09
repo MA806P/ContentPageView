@@ -33,19 +33,31 @@
 
 #pragma mark -  MYZPageDataSource
 
+- (NSInteger)numberOfControllers {
+    return 0;
+}
+
+- (CGRect)preferPageFrame {
+    return CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
+}
+
+
 - (UIViewController *)controllerAtIndex:(NSInteger)index {
     //NSLog(@" %s ", __func__);
     return nil;
-}
-
-- (NSInteger)numberOfControllers {
-    return 0;
 }
 
 //- (CGFloat)pageTopAtIndex:(NSInteger)index {
 //    
 //}
 
+
+#pragma mark - MYZTabDataSource
+
+
+- (CGFloat)preferTabY {
+    return 0;
+}
 
 
 @end

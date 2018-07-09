@@ -6,9 +6,11 @@
 //  Copyright © 2018年 myz. All rights reserved.
 //
 
+
 #import <UIKit/UIKit.h>
 #import "MYZPageProtocol.h"
+#import "MYZTabProtocol.h"
 
-@interface MYZTabController : UIViewController<MYZPageDateSource, MYZPageDelegate>
+@interface MYZTabController : UIViewController<MYZPageDateSource, MYZPageDelegate, MYZTabDataSource>
 
 @end
