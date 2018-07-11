@@ -30,6 +30,10 @@
     self.pageController = pageController;
 }
 
+- (CGRect)preferTabFrame {
+    return CGRectMake([self preferTabX], [self preferTabY], [self preferTabW], 0);
+}
+
 
 #pragma mark -  MYZPageDataSource
 
@@ -56,9 +60,15 @@
 
 
 - (CGFloat)preferTabY {
-    return 0;
+    return 64;
 }
 
+- (CGFloat)preferTabX {
+    return 0;
+}
+- (CGFloat)preferTabW {
+    return [UIScreen mainScreen].bounds.size.width;
+}
 
 @end
 

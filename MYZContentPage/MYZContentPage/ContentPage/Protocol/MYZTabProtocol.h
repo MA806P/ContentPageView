@@ -19,5 +19,7 @@
 @protocol MYZTabDataSource <NSObject>
 
 - (CGFloat)preferTabY;
+- (CGFloat)preferTabX;
+- (CGFloat)preferTabW;
 
 @end
