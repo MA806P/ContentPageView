@@ -7,6 +7,7 @@
 //
 
 #import "MYZHomePageController.h"
+#import "TestHomePageSubController.h"
 
 @interface MYZHomePageController ()
 
@@ -27,7 +28,7 @@
     
     NSLog(@" %s  %ld", __func__, index);
     
-    UIViewController *vc = [[UIViewController alloc] init];
+    TestHomePageSubController *vc = [[TestHomePageSubController alloc] init];
     if (index == 0) {
         vc.view.backgroundColor = [UIColor blueColor];
     } else if (index == 1) {
@@ -46,6 +47,24 @@
 
 -(BOOL)isSubPageCanScrollForIndex:(NSInteger)index {
     return YES;
+}
+
+
+#pragma mark -  TabDataSource
+
+- (NSString *)titleForIndex:(NSInteger)index
+{
+    return [NSString stringWithFormat:@"TAB%zd", index];
+}
+
+- (BOOL)needMarkView
+{
+    return YES;
+}
+
+- (CGFloat)preferTabY
+{
+    return 200;
 }
 
 

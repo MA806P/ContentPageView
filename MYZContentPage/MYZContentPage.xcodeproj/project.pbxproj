@@ -22,6 +22,9 @@
 		DAC7A1FC20D9E7C5006EC55C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC7A1FB20D9E7C5006EC55C /* main.m */; };
 		DAC7A20620D9E7C5006EC55C /* MYZContentPageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC7A20520D9E7C5006EC55C /* MYZContentPageTests.m */; };
 		DAC7A21120D9E7C5006EC55C /* MYZContentPageUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC7A21020D9E7C5006EC55C /* MYZContentPageUITests.m */; };
+		DADD524920F7317A0082DD63 /* MYZPageTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = DADD524820F7317A0082DD63 /* MYZPageTagView.m */; };
+		DADD524C20F731A60082DD63 /* MYZTagBarScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = DADD524B20F731A60082DD63 /* MYZTagBarScrollView.m */; };
+		DADD524F20F754710082DD63 /* TestHomePageSubController.m in Sources */ = {isa = PBXBuildFile; fileRef = DADD524E20F754710082DD63 /* TestHomePageSubController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +77,12 @@
 		DAC7A20C20D9E7C5006EC55C /* MYZContentPageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MYZContentPageUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAC7A21020D9E7C5006EC55C /* MYZContentPageUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYZContentPageUITests.m; sourceTree = "<group>"; };
 		DAC7A21220D9E7C5006EC55C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DADD524720F7317A0082DD63 /* MYZPageTagView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYZPageTagView.h; sourceTree = "<group>"; };
+		DADD524820F7317A0082DD63 /* MYZPageTagView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYZPageTagView.m; sourceTree = "<group>"; };
+		DADD524A20F731A60082DD63 /* MYZTagBarScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYZTagBarScrollView.h; sourceTree = "<group>"; };
+		DADD524B20F731A60082DD63 /* MYZTagBarScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYZTagBarScrollView.m; sourceTree = "<group>"; };
+		DADD524D20F754710082DD63 /* TestHomePageSubController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestHomePageSubController.h; sourceTree = "<group>"; };
+		DADD524E20F754710082DD63 /* TestHomePageSubController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestHomePageSubController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +147,10 @@
 			children = (
 				DA09080520E4E7B8006D185F /* MYZPageContentView.h */,
 				DA09080620E4E7B8006D185F /* MYZPageContentView.m */,
+				DADD524720F7317A0082DD63 /* MYZPageTagView.h */,
+				DADD524820F7317A0082DD63 /* MYZPageTagView.m */,
+				DADD524A20F731A60082DD63 /* MYZTagBarScrollView.h */,
+				DADD524B20F731A60082DD63 /* MYZTagBarScrollView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -160,6 +173,8 @@
 				DA8B912A20E1E465005BD5CC /* Test1ViewController.m */,
 				DA8B912C20E1E472005BD5CC /* Test2ViewController.h */,
 				DA8B912D20E1E472005BD5CC /* Test2ViewController.m */,
+				DADD524D20F754710082DD63 /* TestHomePageSubController.h */,
+				DADD524E20F754710082DD63 /* TestHomePageSubController.m */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -352,9 +367,12 @@
 				DA4B896920E36A560050056B /* MYZTabController.m in Sources */,
 				DA4B896620E369D60050056B /* MYZPageController.m in Sources */,
 				DA4B896C20E36B830050056B /* MYZCoverController.m in Sources */,
+				DADD524F20F754710082DD63 /* TestHomePageSubController.m in Sources */,
 				DAC7A1FC20D9E7C5006EC55C /* main.m in Sources */,
+				DADD524920F7317A0082DD63 /* MYZPageTagView.m in Sources */,
 				DA09080720E4E7B8006D185F /* MYZPageContentView.m in Sources */,
 				DA8B912B20E1E465005BD5CC /* Test1ViewController.m in Sources */,
+				DADD524C20F731A60082DD63 /* MYZTagBarScrollView.m in Sources */,
 				DA8B912720E1D7D2005BD5CC /* MYZHomePageController.m in Sources */,
 				DA8B912E20E1E472005BD5CC /* Test2ViewController.m in Sources */,
 				DAC7A1EE20D9E7C4006EC55C /* AppDelegate.m in Sources */,

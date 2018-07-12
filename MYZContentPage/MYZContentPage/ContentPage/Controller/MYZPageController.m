@@ -17,7 +17,7 @@
 
 @property (nonatomic, strong) MYZPageContentView *scrollView;
 
-@property (nonatomic, assign) NSInteger currentPageIndex;
+@property (nonatomic, assign, readwrite) NSInteger currentPageIndex;
 @property (nonatomic, assign) NSInteger guessToIndex;
 @property (nonatomic, assign) CGFloat originOffset;
 

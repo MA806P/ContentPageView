@@ -19,6 +19,8 @@
 @property (nonatomic, weak) id<MYZPageDateSource> dataSource;
 @property (nonatomic, weak) id<MYZPageDelegate> delegate;
 
+@property (nonatomic, assign, readonly) NSInteger currentPageIndex;
+
 + (BOOL)iPhoneX;
 
 @end
