@@ -7,14 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DA09080720E4E7B8006D185F /* MYZPageContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA09080620E4E7B8006D185F /* MYZPageContentView.m */; };
-		DA4B896620E369D60050056B /* MYZPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4B896520E369D60050056B /* MYZPageController.m */; };
-		DA4B896920E36A560050056B /* MYZTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4B896820E36A560050056B /* MYZTabController.m */; };
-		DA4B896C20E36B830050056B /* MYZCoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4B896B20E36B830050056B /* MYZCoverController.m */; };
-		DA8B912420E1D780005BD5CC /* MYZMineController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8B912320E1D780005BD5CC /* MYZMineController.m */; };
-		DA8B912720E1D7D2005BD5CC /* MYZHomePageController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8B912620E1D7D2005BD5CC /* MYZHomePageController.m */; };
-		DA8B912B20E1E465005BD5CC /* Test1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8B912A20E1E465005BD5CC /* Test1ViewController.m */; };
-		DA8B912E20E1E472005BD5CC /* Test2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8B912D20E1E472005BD5CC /* Test2ViewController.m */; };
+		DA85CA60245573F5002E9968 /* MYZContentItemController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA85CA5F245573F5002E9968 /* MYZContentItemController.m */; };
 		DAC7A1EE20D9E7C4006EC55C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC7A1ED20D9E7C4006EC55C /* AppDelegate.m */; };
 		DAC7A1F420D9E7C4006EC55C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAC7A1F220D9E7C4006EC55C /* Main.storyboard */; };
 		DAC7A1F620D9E7C5006EC55C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAC7A1F520D9E7C5006EC55C /* Assets.xcassets */; };
@@ -22,9 +15,10 @@
 		DAC7A1FC20D9E7C5006EC55C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC7A1FB20D9E7C5006EC55C /* main.m */; };
 		DAC7A20620D9E7C5006EC55C /* MYZContentPageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC7A20520D9E7C5006EC55C /* MYZContentPageTests.m */; };
 		DAC7A21120D9E7C5006EC55C /* MYZContentPageUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC7A21020D9E7C5006EC55C /* MYZContentPageUITests.m */; };
-		DADD524920F7317A0082DD63 /* MYZPageTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = DADD524820F7317A0082DD63 /* MYZPageTagView.m */; };
-		DADD524C20F731A60082DD63 /* MYZTagBarScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = DADD524B20F731A60082DD63 /* MYZTagBarScrollView.m */; };
-		DADD524F20F754710082DD63 /* TestHomePageSubController.m in Sources */ = {isa = PBXBuildFile; fileRef = DADD524E20F754710082DD63 /* TestHomePageSubController.m */; };
+		DAD8E8B624542FD200C314C9 /* MYZPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD8E8B524542FD200C314C9 /* MYZPageViewController.m */; };
+		DAD8E8B92454303500C314C9 /* MYZSlidePageController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD8E8B82454303500C314C9 /* MYZSlidePageController.m */; };
+		DAD8E8BC2454304A00C314C9 /* MYZContentPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD8E8BB2454304A00C314C9 /* MYZContentPageController.m */; };
+		DAD8E8BF2454334300C314C9 /* MYZPageTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD8E8BE2454334200C314C9 /* MYZPageTableView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,24 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DA09080520E4E7B8006D185F /* MYZPageContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYZPageContentView.h; sourceTree = "<group>"; };
-		DA09080620E4E7B8006D185F /* MYZPageContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYZPageContentView.m; sourceTree = "<group>"; };
-		DA4B896220E35FCC0050056B /* MYZPageProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYZPageProtocol.h; sourceTree = "<group>"; };
-		DA4B896320E365060050056B /* MYZTabProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYZTabProtocol.h; sourceTree = "<group>"; };
-		DA4B896420E369D60050056B /* MYZPageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYZPageController.h; sourceTree = "<group>"; };
-		DA4B896520E369D60050056B /* MYZPageController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYZPageController.m; sourceTree = "<group>"; };
-		DA4B896720E36A560050056B /* MYZTabController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYZTabController.h; sourceTree = "<group>"; };
-		DA4B896820E36A560050056B /* MYZTabController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYZTabController.m; sourceTree = "<group>"; };
-		DA4B896A20E36B830050056B /* MYZCoverController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYZCoverController.h; sourceTree = "<group>"; };
-		DA4B896B20E36B830050056B /* MYZCoverController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYZCoverController.m; sourceTree = "<group>"; };
-		DA8B912220E1D780005BD5CC /* MYZMineController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYZMineController.h; sourceTree = "<group>"; };
-		DA8B912320E1D780005BD5CC /* MYZMineController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYZMineController.m; sourceTree = "<group>"; };
-		DA8B912520E1D7D2005BD5CC /* MYZHomePageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYZHomePageController.h; sourceTree = "<group>"; };
-		DA8B912620E1D7D2005BD5CC /* MYZHomePageController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYZHomePageController.m; sourceTree = "<group>"; };
-		DA8B912920E1E465005BD5CC /* Test1ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test1ViewController.h; sourceTree = "<group>"; };
-		DA8B912A20E1E465005BD5CC /* Test1ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test1ViewController.m; sourceTree = "<group>"; };
-		DA8B912C20E1E472005BD5CC /* Test2ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test2ViewController.h; sourceTree = "<group>"; };
-		DA8B912D20E1E472005BD5CC /* Test2ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test2ViewController.m; sourceTree = "<group>"; };
+		DA85CA5D24557189002E9968 /* MYZConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYZConst.h; sourceTree = "<group>"; };
+		DA85CA5E245573F5002E9968 /* MYZContentItemController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYZContentItemController.h; sourceTree = "<group>"; };
+		DA85CA5F245573F5002E9968 /* MYZContentItemController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYZContentItemController.m; sourceTree = "<group>"; };
 		DAC7A1E920D9E7C4006EC55C /* MYZContentPage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MYZContentPage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAC7A1EC20D9E7C4006EC55C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DAC7A1ED20D9E7C4006EC55C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -77,12 +56,14 @@
 		DAC7A20C20D9E7C5006EC55C /* MYZContentPageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MYZContentPageUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAC7A21020D9E7C5006EC55C /* MYZContentPageUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYZContentPageUITests.m; sourceTree = "<group>"; };
 		DAC7A21220D9E7C5006EC55C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DADD524720F7317A0082DD63 /* MYZPageTagView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYZPageTagView.h; sourceTree = "<group>"; };
-		DADD524820F7317A0082DD63 /* MYZPageTagView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYZPageTagView.m; sourceTree = "<group>"; };
-		DADD524A20F731A60082DD63 /* MYZTagBarScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYZTagBarScrollView.h; sourceTree = "<group>"; };
-		DADD524B20F731A60082DD63 /* MYZTagBarScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYZTagBarScrollView.m; sourceTree = "<group>"; };
-		DADD524D20F754710082DD63 /* TestHomePageSubController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestHomePageSubController.h; sourceTree = "<group>"; };
-		DADD524E20F754710082DD63 /* TestHomePageSubController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestHomePageSubController.m; sourceTree = "<group>"; };
+		DAD8E8B424542FD200C314C9 /* MYZPageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYZPageViewController.h; sourceTree = "<group>"; };
+		DAD8E8B524542FD200C314C9 /* MYZPageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYZPageViewController.m; sourceTree = "<group>"; };
+		DAD8E8B72454303500C314C9 /* MYZSlidePageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYZSlidePageController.h; sourceTree = "<group>"; };
+		DAD8E8B82454303500C314C9 /* MYZSlidePageController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYZSlidePageController.m; sourceTree = "<group>"; };
+		DAD8E8BA2454304A00C314C9 /* MYZContentPageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYZContentPageController.h; sourceTree = "<group>"; };
+		DAD8E8BB2454304A00C314C9 /* MYZContentPageController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYZContentPageController.m; sourceTree = "<group>"; };
+		DAD8E8BD2454334200C314C9 /* MYZPageTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYZPageTableView.h; sourceTree = "<group>"; };
+		DAD8E8BE2454334200C314C9 /* MYZPageTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYZPageTableView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,75 +91,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DA8B911D20E1D5B3005BD5CC /* ContentPage */ = {
-			isa = PBXGroup;
-			children = (
-				DA8B911E20E1D5B3005BD5CC /* Protocol */,
-				DA8B911F20E1D5B3005BD5CC /* Controller */,
-				DA8B912020E1D5B3005BD5CC /* View */,
-			);
-			path = ContentPage;
-			sourceTree = "<group>";
-		};
-		DA8B911E20E1D5B3005BD5CC /* Protocol */ = {
-			isa = PBXGroup;
-			children = (
-				DA4B896220E35FCC0050056B /* MYZPageProtocol.h */,
-				DA4B896320E365060050056B /* MYZTabProtocol.h */,
-			);
-			path = Protocol;
-			sourceTree = "<group>";
-		};
-		DA8B911F20E1D5B3005BD5CC /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				DA4B896420E369D60050056B /* MYZPageController.h */,
-				DA4B896520E369D60050056B /* MYZPageController.m */,
-				DA4B896720E36A560050056B /* MYZTabController.h */,
-				DA4B896820E36A560050056B /* MYZTabController.m */,
-				DA4B896A20E36B830050056B /* MYZCoverController.h */,
-				DA4B896B20E36B830050056B /* MYZCoverController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		DA8B912020E1D5B3005BD5CC /* View */ = {
-			isa = PBXGroup;
-			children = (
-				DA09080520E4E7B8006D185F /* MYZPageContentView.h */,
-				DA09080620E4E7B8006D185F /* MYZPageContentView.m */,
-				DADD524720F7317A0082DD63 /* MYZPageTagView.h */,
-				DADD524820F7317A0082DD63 /* MYZPageTagView.m */,
-				DADD524A20F731A60082DD63 /* MYZTagBarScrollView.h */,
-				DADD524B20F731A60082DD63 /* MYZTagBarScrollView.m */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		DA8B912120E1D5B3005BD5CC /* Example */ = {
-			isa = PBXGroup;
-			children = (
-				DA8B912520E1D7D2005BD5CC /* MYZHomePageController.h */,
-				DA8B912620E1D7D2005BD5CC /* MYZHomePageController.m */,
-				DA8B912220E1D780005BD5CC /* MYZMineController.h */,
-				DA8B912320E1D780005BD5CC /* MYZMineController.m */,
-			);
-			path = Example;
-			sourceTree = "<group>";
-		};
-		DA8B912820E1E456005BD5CC /* Test */ = {
-			isa = PBXGroup;
-			children = (
-				DA8B912920E1E465005BD5CC /* Test1ViewController.h */,
-				DA8B912A20E1E465005BD5CC /* Test1ViewController.m */,
-				DA8B912C20E1E472005BD5CC /* Test2ViewController.h */,
-				DA8B912D20E1E472005BD5CC /* Test2ViewController.m */,
-				DADD524D20F754710082DD63 /* TestHomePageSubController.h */,
-				DADD524E20F754710082DD63 /* TestHomePageSubController.m */,
-			);
-			path = Test;
-			sourceTree = "<group>";
-		};
 		DAC7A1E020D9E7C4006EC55C = {
 			isa = PBXGroup;
 			children = (
@@ -202,11 +114,12 @@
 		DAC7A1EB20D9E7C4006EC55C /* MYZContentPage */ = {
 			isa = PBXGroup;
 			children = (
-				DA8B911D20E1D5B3005BD5CC /* ContentPage */,
-				DA8B912120E1D5B3005BD5CC /* Example */,
-				DA8B912820E1E456005BD5CC /* Test */,
+				DAD8E8B324542F3400C314C9 /* Page_1 */,
+				DAD8E8B124542F3400C314C9 /* Page_2 */,
+				DAD8E8B224542F3400C314C9 /* Page_3 */,
 				DAC7A1EC20D9E7C4006EC55C /* AppDelegate.h */,
 				DAC7A1ED20D9E7C4006EC55C /* AppDelegate.m */,
+				DA85CA5D24557189002E9968 /* MYZConst.h */,
 				DAC7A1F220D9E7C4006EC55C /* Main.storyboard */,
 				DAC7A1F520D9E7C5006EC55C /* Assets.xcassets */,
 				DAC7A1F720D9E7C5006EC55C /* LaunchScreen.storyboard */,
@@ -232,6 +145,37 @@
 				DAC7A21220D9E7C5006EC55C /* Info.plist */,
 			);
 			path = MYZContentPageUITests;
+			sourceTree = "<group>";
+		};
+		DAD8E8B124542F3400C314C9 /* Page_2 */ = {
+			isa = PBXGroup;
+			children = (
+				DAD8E8B72454303500C314C9 /* MYZSlidePageController.h */,
+				DAD8E8B82454303500C314C9 /* MYZSlidePageController.m */,
+			);
+			path = Page_2;
+			sourceTree = "<group>";
+		};
+		DAD8E8B224542F3400C314C9 /* Page_3 */ = {
+			isa = PBXGroup;
+			children = (
+				DAD8E8B424542FD200C314C9 /* MYZPageViewController.h */,
+				DAD8E8B524542FD200C314C9 /* MYZPageViewController.m */,
+			);
+			path = Page_3;
+			sourceTree = "<group>";
+		};
+		DAD8E8B324542F3400C314C9 /* Page_1 */ = {
+			isa = PBXGroup;
+			children = (
+				DAD8E8BA2454304A00C314C9 /* MYZContentPageController.h */,
+				DAD8E8BB2454304A00C314C9 /* MYZContentPageController.m */,
+				DAD8E8BD2454334200C314C9 /* MYZPageTableView.h */,
+				DAD8E8BE2454334200C314C9 /* MYZPageTableView.m */,
+				DA85CA5E245573F5002E9968 /* MYZContentItemController.h */,
+				DA85CA5F245573F5002E9968 /* MYZContentItemController.m */,
+			);
+			path = Page_1;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -364,19 +308,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA4B896920E36A560050056B /* MYZTabController.m in Sources */,
-				DA4B896620E369D60050056B /* MYZPageController.m in Sources */,
-				DA4B896C20E36B830050056B /* MYZCoverController.m in Sources */,
-				DADD524F20F754710082DD63 /* TestHomePageSubController.m in Sources */,
 				DAC7A1FC20D9E7C5006EC55C /* main.m in Sources */,
-				DADD524920F7317A0082DD63 /* MYZPageTagView.m in Sources */,
-				DA09080720E4E7B8006D185F /* MYZPageContentView.m in Sources */,
-				DA8B912B20E1E465005BD5CC /* Test1ViewController.m in Sources */,
-				DADD524C20F731A60082DD63 /* MYZTagBarScrollView.m in Sources */,
-				DA8B912720E1D7D2005BD5CC /* MYZHomePageController.m in Sources */,
-				DA8B912E20E1E472005BD5CC /* Test2ViewController.m in Sources */,
+				DA85CA60245573F5002E9968 /* MYZContentItemController.m in Sources */,
+				DAD8E8BC2454304A00C314C9 /* MYZContentPageController.m in Sources */,
 				DAC7A1EE20D9E7C4006EC55C /* AppDelegate.m in Sources */,
-				DA8B912420E1D780005BD5CC /* MYZMineController.m in Sources */,
+				DAD8E8B624542FD200C314C9 /* MYZPageViewController.m in Sources */,
+				DAD8E8B92454303500C314C9 /* MYZSlidePageController.m in Sources */,
+				DAD8E8BF2454334300C314C9 /* MYZPageTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -546,6 +484,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K9C6ADD2L3;
 				INFOPLIST_FILE = MYZContentPage/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -562,6 +501,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K9C6ADD2L3;
 				INFOPLIST_FILE = MYZContentPage/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
