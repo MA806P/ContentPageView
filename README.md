@@ -11,6 +11,7 @@
 
 ![demo](https://github.com/MA806P/ContentPageView/blob/master/Screenshot/page.gif)
 
-还有其他的实现方法可参考：
-https://github.com/xichen744/SPPage
-https://github.com/12207480/TYPagerController
+还有其他的实现方法可参考： 
+
+https://github.com/xichen744/SPPage  
+https://github.com/12207480/TYPagerController 
