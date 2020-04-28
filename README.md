@@ -32,6 +32,3 @@ https://github.com/12207480/TYPagerController <br>
 
 
 
-
-
-
