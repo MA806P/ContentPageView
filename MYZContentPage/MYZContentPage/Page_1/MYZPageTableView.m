@@ -65,7 +65,7 @@
 }
 
 - (void)dealloc {
-    NSLog(@"dealloc");
+    //NSLog(@"dealloc");
     [self.tableView removeObserver:self forKeyPath:@"contentOffset"];
 }
 

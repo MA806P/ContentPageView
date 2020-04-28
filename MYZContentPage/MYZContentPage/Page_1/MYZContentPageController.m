@@ -23,7 +23,8 @@ static CGFloat const MYZPageSegmentViewH = 40.0;
 @property (nonatomic, weak) MYZPageTableView *currentTableView;
 @property (nonatomic, weak) UIView * indexLine;
 
-@property (nonatomic, strong) NSArray *segmentTitleArray;
+@property (nonatomic, strong) NSMutableArray *allSegmentTitleArray;
+@property (nonatomic, strong) NSMutableArray *segmentTitleArray;
 @property (nonatomic, strong) NSMutableArray *segmentBtnArray;
 @property (nonatomic, strong) NSMutableArray *contentTableArray;
 
@@ -54,14 +55,19 @@ static CGFloat const MYZPageSegmentViewH = 40.0;
     //设置显示的数据
     self.segmentBtnArray = [NSMutableArray array];
     self.contentTableArray = [NSMutableArray array];
-    self.segmentTitleArray = @[@"Title1",@"Title2",@"Title3",@"Title4",@"Title5",@"Title6",@"Title7",@"Title8",@"Title9"];
-    
+
+    self.allSegmentTitleArray = [NSMutableArray arrayWithArray:@[@"Title4",@"Title5",@"Title6",@"Title7",@"Title8",@"Title9"]];
+    self.segmentTitleArray = [NSMutableArray arrayWithArray:@[@"Title1",@"Title2",@"Title3"]];
 }
 
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self pageReloadData];
+}
 
-- (void)setSegmentTitleArray:(NSArray *)segmentTitleArray {
-    _segmentTitleArray = segmentTitleArray;
+
+- (void)pageReloadData {
     
     for (UIButton *segmentBtn in self.segmentBtnArray) {
         [segmentBtn removeFromSuperview];
@@ -122,6 +128,8 @@ static CGFloat const MYZPageSegmentViewH = 40.0;
 //更多按钮点击
 - (void)p_moreBtnTouchAction {
     MYZContentItemController *item = [[MYZContentItemController alloc] init];
+    item.allTitleArray = self.allSegmentTitleArray;
+    item.myTitleArray = self.segmentTitleArray;
     [self.navigationController pushViewController:item animated:YES];
 }
 
@@ -172,7 +180,7 @@ static CGFloat const MYZPageSegmentViewH = 40.0;
 - (void)pageTableView:(MYZPageTableView *)tableView verticalScrollPosition:(CGFloat)position {
     
     CGFloat currentY = position + MYZPageHeadViewH;
-    NSLog(@"=== %.2lf", currentY);
+    //NSLog(@"=== %.2lf", currentY);
     if (currentY >= 0) {
         
         if (currentY < MYZPageHeadViewH) {

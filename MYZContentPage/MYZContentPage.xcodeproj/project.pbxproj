@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DA85CA60245573F5002E9968 /* MYZContentItemController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA85CA5F245573F5002E9968 /* MYZContentItemController.m */; };
+		DA85CA642456CED7002E9968 /* MYZContentItemController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA85CA632456CED7002E9968 /* MYZContentItemController.m */; };
+		DA85CA672456D673002E9968 /* MYZItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA85CA662456D673002E9968 /* MYZItemCell.m */; };
 		DAC7A1EE20D9E7C4006EC55C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC7A1ED20D9E7C4006EC55C /* AppDelegate.m */; };
 		DAC7A1F420D9E7C4006EC55C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAC7A1F220D9E7C4006EC55C /* Main.storyboard */; };
 		DAC7A1F620D9E7C5006EC55C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAC7A1F520D9E7C5006EC55C /* Assets.xcassets */; };
@@ -40,8 +41,10 @@
 
 /* Begin PBXFileReference section */
 		DA85CA5D24557189002E9968 /* MYZConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYZConst.h; sourceTree = "<group>"; };
-		DA85CA5E245573F5002E9968 /* MYZContentItemController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYZContentItemController.h; sourceTree = "<group>"; };
-		DA85CA5F245573F5002E9968 /* MYZContentItemController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYZContentItemController.m; sourceTree = "<group>"; };
+		DA85CA622456CED7002E9968 /* MYZContentItemController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYZContentItemController.h; sourceTree = "<group>"; };
+		DA85CA632456CED7002E9968 /* MYZContentItemController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYZContentItemController.m; sourceTree = "<group>"; };
+		DA85CA652456D673002E9968 /* MYZItemCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYZItemCell.h; sourceTree = "<group>"; };
+		DA85CA662456D673002E9968 /* MYZItemCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYZItemCell.m; sourceTree = "<group>"; };
 		DAC7A1E920D9E7C4006EC55C /* MYZContentPage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MYZContentPage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAC7A1EC20D9E7C4006EC55C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DAC7A1ED20D9E7C4006EC55C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -91,6 +94,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA85CA612456CED7002E9968 /* ItemDrag */ = {
+			isa = PBXGroup;
+			children = (
+				DA85CA622456CED7002E9968 /* MYZContentItemController.h */,
+				DA85CA632456CED7002E9968 /* MYZContentItemController.m */,
+				DA85CA652456D673002E9968 /* MYZItemCell.h */,
+				DA85CA662456D673002E9968 /* MYZItemCell.m */,
+			);
+			path = ItemDrag;
+			sourceTree = "<group>";
+		};
 		DAC7A1E020D9E7C4006EC55C = {
 			isa = PBXGroup;
 			children = (
@@ -172,8 +186,7 @@
 				DAD8E8BB2454304A00C314C9 /* MYZContentPageController.m */,
 				DAD8E8BD2454334200C314C9 /* MYZPageTableView.h */,
 				DAD8E8BE2454334200C314C9 /* MYZPageTableView.m */,
-				DA85CA5E245573F5002E9968 /* MYZContentItemController.h */,
-				DA85CA5F245573F5002E9968 /* MYZContentItemController.m */,
+				DA85CA612456CED7002E9968 /* ItemDrag */,
 			);
 			path = Page_1;
 			sourceTree = "<group>";
@@ -309,12 +322,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAC7A1FC20D9E7C5006EC55C /* main.m in Sources */,
-				DA85CA60245573F5002E9968 /* MYZContentItemController.m in Sources */,
+				DA85CA642456CED7002E9968 /* MYZContentItemController.m in Sources */,
 				DAD8E8BC2454304A00C314C9 /* MYZContentPageController.m in Sources */,
 				DAC7A1EE20D9E7C4006EC55C /* AppDelegate.m in Sources */,
 				DAD8E8B624542FD200C314C9 /* MYZPageViewController.m in Sources */,
 				DAD8E8B92454303500C314C9 /* MYZSlidePageController.m in Sources */,
 				DAD8E8BF2454334300C314C9 /* MYZPageTableView.m in Sources */,
+				DA85CA672456D673002E9968 /* MYZItemCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

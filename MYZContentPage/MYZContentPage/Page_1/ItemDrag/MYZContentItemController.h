@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MYZContentItemController : UIViewController
 
+@property (nonatomic, strong) NSMutableArray *myTitleArray;
+@property (nonatomic, strong) NSMutableArray *allTitleArray;
+
 @end
 
 NS_ASSUME_NONNULL_END
