@@ -28,12 +28,6 @@
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"完成" style:UIBarButtonItemStyleDone target:self action:@selector(navBarRightButtonAction)];
     self.status = 1;
-    /**
-     https://juejin.im/post/5c65316751882562c85ac6f6
-     https://juejin.im/entry/58afcb708d6d810057ddf4b9
-     */
-    
-    
     
     CGFloat collectionY = IPHONE_NAVIGATIONBAR_HEIGHT;
     CGFloat collectionH = SCREEN_HEIGHT - collectionY;
