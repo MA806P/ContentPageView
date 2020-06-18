@@ -19,6 +19,7 @@
 https://github.com/xichen744/SPPage <br>
 https://github.com/Roylee-ML/SwipeTableView <br>
 https://github.com/12207480/TYPagerController <br>
+https://github.com/indulgeIn/JXCategoryView <br>
 
 
 <br>
